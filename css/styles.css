@@ -158,12 +158,17 @@ img {
     text-transform: uppercase;
     font-weight: 800;
     margin-bottom: 2rem;
+    border: none;
 }
 
 @media (min-width: 768px) {
     .boton {
         display: inline-block;
     }
+}
+
+.boton:hover {
+    cursor: pointer;
 }
 
 .boton--primario {
@@ -238,4 +243,40 @@ img {
         grid-template-columns: repeat(2, 1fr);
         gap: 2rem;
     }
+}
+
+/** Contacto **/
+.contacto-bg {
+    background-image: url(../img/contacto.jpg);
+    height: 40rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/** Formulario **/
+.formulario {
+    background-color: var(--blanco);
+    margin: -5rem auto 0 auto;
+    width: 95%;
+    padding: 5rem;
+}
+
+.campo {
+    display: flex;
+    margin-bottom: 2rem;
+}
+
+.campo__label {
+    flex: 0 0 9rem;
+    text-align: right;
+    padding-right: 2rem;
+}
+
+.campo__field {
+    flex: 1;
+    border: 1px solid var(--gris);
+}
+
+.campo__field--textarea {
+    height: 20rem;
 }
