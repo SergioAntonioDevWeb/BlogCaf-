@@ -29,8 +29,17 @@ body {
     margin: 0 auto;
 }
 
+/* Enlaces accesibles */
 a {
     text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+/* Focus visible para navegación por teclado */
+a:focus-visible {
+    outline: 2px solid var(--primario);
+    outline-offset: 2px;
+    border-radius: 2px;
 }
 
 h1, h2, h3, h4 {
@@ -54,8 +63,28 @@ h4 {
     font-size: 2.8rem;    
 }
 
+/* Imágenes responsivas y accesibles */
 img {
     max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Skip link para accesibilidad */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 6px;
+    background: var(--primario);
+    color: var(--blanco);
+    padding: 8px;
+    text-decoration: none;
+    border-radius: 4px;
+    z-index: 1000;
+}
+
+.skip-link:focus {
+    top: 6px;
 }
 
 /** Utilidades **/
@@ -123,11 +152,20 @@ img {
     }
 }
 
+/* Enlaces de navegación mejorados */
 .navegacion__enlace {
     display: block;
     text-align: center;
     font-size: 1.8rem;
     color: var(--blanco);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.navegacion__enlace:hover,
+.navegacion__enlace:focus {
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 @media (min-width: 768px) {
@@ -167,8 +205,11 @@ img {
     }
 }
 
-.boton:hover {
+.boton:hover,
+.boton:focus {
     cursor: pointer;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .boton--primario {
@@ -275,6 +316,17 @@ img {
 .campo__field {
     flex: 1;
     border: 1px solid var(--gris);
+    padding: 1rem;
+    border-radius: 4px;
+    font-family: var(--fuenteParrafos);
+    font-size: 1.6rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.campo__field:focus {
+    outline: none;
+    border-color: var(--primario);
+    box-shadow: 0 0 0 3px rgba(120, 77, 60, 0.1);
 }
 
 .campo__field--textarea {

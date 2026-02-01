@@ -3,18 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Página Web de Blog de Café">
-    <title>BlogDecafé</title>
+    <meta name="description" content="BlogDeCafé - Tu blog especializado en café con las mejores recetas, consejos para baristas y cursos de café. Aprende de los expertos y mejora tus habilidades.">
+    <meta name="keywords" content="blog café, recetas café, consejos barista, cursos café, BlogDeCafé">
+    <title>BlogDeCafé - Tu Blog Especializado en Café, Recetas y Cursos</title>
     <link rel="preload" href="css/normalize.css" as="style">
     <link rel="stylesheet" href="css/normalize.css">
+    <!-- Favicon para mejor branding -->
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    
+    <!-- Optimización de fuentes Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link rel="preload" href="css/styles.css" as="style">
     <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
-    <header class="header">
+<body itemscope itemtype="http://schema.org/Blog">
+    <header class="header" role="banner">
         <div class="contenedor">
             <div class="barra">
                 <a class="logo" href="index.html">
@@ -28,6 +33,7 @@
                 </nav>
             </div>
         </div>
+        <!-- Sección hero con llamada a la acción -->
         <div class="header__texto">
             <h2 class="no-margin">Blog de Café con Consejos y Cursos</h2>
             <p class="no-margin">Aprende de los expertos con las mejores recetas y consejos</p>
@@ -35,24 +41,28 @@
     </header>
 
     <div class="contenedor contenido-principal">
-        <main class="blog">
+        <!-- Contenido principal del blog -->
+        <main class="blog" role="main">
             <h3>Nuestro Blog</h3>
 
-            <article class="entrada">
+            <!-- Artículo 1: Tipos de Grano de Café -->
+            <article class="entrada" itemscope itemtype="http://schema.org/BlogPosting">
                 <div class="entrada__imagen">
-                    <img loading="lazy" src="img/blog1.webp" alt="Imagen Blog">
+                    <!-- Imagen del artículo sobre tipos de granos de café -->
+                    <img loading="lazy" src="img/blog1.webp" alt="Diferentes tipos de granos de café arábica y robusta en tazas de cerámica" itemprop="image">
                 </div>
 
                 <div class="entrada__contenido">
-                    <h4 class="no-margin">Tipos de Grano de Café</h4>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur tenetur dolorem corporis ex omnis veritatis dolorum ratione temporibus optio necessitatibus! Deleniti ut soluta fuga ipsam.</p>
+                    <h4 class="no-margin" itemprop="headline">Tipos de Grano de Café</h4>
+                    <p itemprop="description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur tenetur dolorem corporis ex omnis veritatis dolorum ratione temporibus optio necessitatibus! Deleniti ut soluta fuga ipsam.</p>
                     <a href="entrada.html" class="boton boton--primario">Leer Entrada</a>
                 </div>
             </article>
 
             <article class="entrada">
                 <div class="entrada__imagen">
-                    <img loading="lazy" src="img/blog2.webp" alt="Imagen Blog">
+                    <!-- Imagen del artículo sobre recetas de café -->
+                    <img loading="lazy" src="img/blog2.webp" alt="Tres deliciosas recetas de café especial con espuma y decoraciones">
                 </div>
 
                 <div class="entrada__contenido">
@@ -64,7 +74,8 @@
 
             <article class="entrada">
                 <div class="entrada__imagen">
-                    <img loading="lazy" src="img/blog3.webp" alt="Imagen Blog">
+                    <!-- Imagen del artículo sobre beneficios del café -->
+                    <img loading="lazy" src="img/blog3.webp" alt="Persona disfrutando una taza de café por la mañana con beneficios para la salud">
                 </div>
 
                 <div class="entrada__contenido">
